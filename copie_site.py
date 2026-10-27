@@ -959,6 +959,7 @@ async def copie_site(url, hotel_dir):
         async with async_playwright() as playwright:
             browser = await playwright.chromium.launch(
                 headless=True,
+                channel="chromium",
          #       executable_path=str(chrome_path),
                 args=[
                     "--disable-blink-features=AutomationControlled",
