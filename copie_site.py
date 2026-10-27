@@ -87,10 +87,7 @@ OVERLAP = 100
 # Temps laissé aux animations après chaque scroll.
 ANIMATION_WAIT_MS = 2200
 
-CHEMIN_CHROME = (
-    "/Applications/Google Chrome.app/"
-    "Contents/MacOS/Google Chrome"
-)
+#CHEMIN_CHROME = ("/Applications/Google Chrome.app/" "Contents/MacOS/Google Chrome")
 
 async def ouvrir_page_accueil(page, url):
     url = url.strip()
@@ -938,10 +935,10 @@ async def copie_site(url, hotel_dir):
     # ========================================================
     # CHROME
     # ========================================================
-    chrome_path = Path(CHEMIN_CHROME)
+    #chrome_path = Path(CHEMIN_CHROME)
 
-    if not chrome_path.is_file():
-        raise RuntimeError(f"Google Chrome est introuvable : {chrome_path}")
+    #if not chrome_path.is_file():
+    #    raise RuntimeError(f"Google Chrome est introuvable : {chrome_path}")
 
     print()
     print("========================================")
@@ -962,7 +959,7 @@ async def copie_site(url, hotel_dir):
         async with async_playwright() as playwright:
             browser = await playwright.chromium.launch(
                 headless=True,
-                executable_path=str(chrome_path),
+         #       executable_path=str(chrome_path),
                 args=[
                     "--disable-blink-features=AutomationControlled",
                     "--disable-dev-shm-usage",
