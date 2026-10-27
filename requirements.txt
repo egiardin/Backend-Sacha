@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+google-genai
+numpy
+requests
+pydantic
+boto3
+Pillow
+playwright
+crawl4ai
